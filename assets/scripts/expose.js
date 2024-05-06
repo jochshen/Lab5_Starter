@@ -9,6 +9,8 @@ function init() {
   const volElement = document.getElementById("volume");
   const volImage = document.querySelector("#volume-controls img");
   let selectedHorn = ""
+  const jsConfetti = new JSConfetti();
+
   hornSelect.addEventListener("change", function () {
     selectedHorn = hornSelect.value;
     console.log(hornSelect.value);
@@ -22,7 +24,6 @@ function init() {
     audioElement.play();
 
     if (selectedHorn === "party-horn") {
-      const jsConfetti = new JSConfetti();
       jsConfetti.addConfetti({
       });
     }
